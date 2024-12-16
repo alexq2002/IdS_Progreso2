@@ -68,12 +68,22 @@ http://localhost:3003/soap
 
 ### API REST (Gestión de Reservas)
 
-Crea una reserva y devuelve el id del registro
+Crea una reserva y devuelve el id del registro.
 POST
 http://localhost:3004/reservations
 ![Texto alternativo](./images/Screenshot_1.png)
 
-Consulta una reserva específica, según su id el cual se lo debe colocar en la URI de la petición
+Consulta una reserva específica, según su id el cual se lo debe colocar en la URI de la petición; y devuelve la reservación con toda su información.
 GET
-http://localhost:3004/reservations/_5_
+http://localhost:3004/reservations/**5**
 ![Texto alternativo](./images/Screenshot_3.png)
+
+Elimina una reserva específica, según su id el cual se lo debe colocar en la URI de la petición; y devuelve la confirmación de que la reserva se ha cancelado.
+DELETE
+http://localhost:3004/reservations/**5**
+![Texto alternativo](./images/Screenshot_4.png)
+
+Al volver a consultar, la reserva no se encuentra debido a que fue cancelada. Esto evidencia el funcionamiento de la petición anterior DELETE
+![Texto alternativo](./images/Screenshot_5.png)
+
+### Microservicio (Gestión de Inventario)
