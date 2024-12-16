@@ -69,21 +69,42 @@ http://localhost:3003/soap
 ### API REST (Gestión de Reservas)
 
 Crea una reserva y devuelve el id del registro.
+
 POST
 http://localhost:3004/reservations
 ![Texto alternativo](./images/Screenshot_1.png)
 
 Consulta una reserva específica, según su id el cual se lo debe colocar en la URI de la petición; y devuelve la reservación con toda su información.
+
 GET
-http://localhost:3004/reservations/**5**
+http://localhost:3004/reservations/5
 ![Texto alternativo](./images/Screenshot_3.png)
 
 Elimina una reserva específica, según su id el cual se lo debe colocar en la URI de la petición; y devuelve la confirmación de que la reserva se ha cancelado.
+
 DELETE
-http://localhost:3004/reservations/**5**
+http://localhost:3004/reservations/5
 ![Texto alternativo](./images/Screenshot_4.png)
 
-Al volver a consultar, la reserva no se encuentra debido a que fue cancelada. Esto evidencia el funcionamiento de la petición anterior DELETE
+Al volver a consultar, la reserva no se encuentra debido a que fue cancelada. Esto evidencia el funcionamiento de la petición anterior DELETE.
+
 ![Texto alternativo](./images/Screenshot_5.png)
 
 ### Microservicio (Gestión de Inventario)
+
+Crea una habitación con su número, tipo y estado; y devuelve su id
+
+POST
+http://localhost:3005/rooms
+![Texto alternativo](./images/Screenshot_6.png)
+
+Actualiza el estado de una habitación y devuelve mensaje de confirmación del cambio
+
+PATCH
+http://localhost:3005/rooms/4
+![Texto alternativo](./images/Screenshot_7.png)
+
+Se verifica en la consulta de la tabla habitaciones de la BD inventarios que el estado cambió, evidenciando el correcto funcinoamiento del PATCH
+![Texto alternativo](./images/Screenshot_8.png)
+
+**Link al video del funcionamiento:** https://udlaec-my.sharepoint.com/:f:/g/personal/alexander_quintana_udla_edu_ec/En3CH-1ZePVIhRLAIYIJ-LABm7paaKx1aJ-ItFbZpFiBig?e=Zog2pM
