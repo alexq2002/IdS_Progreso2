@@ -61,4 +61,19 @@ CREATE TABLE habitaciones (
 
 ### Servicio Web SOAP (Consulta de Disponibilidad)
 
+Consulta de disponibilidad de las habitaciones según el tipo y un rango de fechas, devuelve una lista en un formato XML con las habitaciones correspondientes.
+POST
+http://localhost:3003/soap
 ![Texto alternativo](./images/Screenshot_2.png)
+
+### API REST (Gestión de Reservas)
+
+Crea una reserva y devuelve el id del registro
+POST
+http://localhost:3004/reservations
+![Texto alternativo](./images/Screenshot_1.png)
+
+Consulta una reserva específica, según su id el cual se lo debe colocar en la URI de la petición
+GET
+http://localhost:3004/reservations/_5_
+![Texto alternativo](./images/Screenshot_3.png)
