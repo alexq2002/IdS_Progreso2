@@ -1,7 +1,9 @@
 # Examen práctico 2 de integración de sistemas
 ## Scripts SQL para Bases de Datos:
-### Base de datos para Servicio Web SOAP (Consulta de Disponibilidad)
-`CREATE DATABASE inventario;
+### Servicio Web SOAP (Consulta de Disponibilidad)
+
+```SQL
+CREATE DATABASE inventario;
 
 USE inventario;
 
@@ -10,5 +12,6 @@ CREATE TABLE habitaciones (
     numero_habitacion INT,
     tipo_habitacion VARCHAR(50),
     status ENUM('disponible', 'ocupado', 'mantenimiento')
-);`
+);
+```
 ---
