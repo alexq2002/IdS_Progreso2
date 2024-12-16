@@ -1,6 +1,9 @@
 # Examen práctico 2 de integración de sistemas
+
 ## Scripts SQL para Bases de Datos:
+
 ### Servicio Web SOAP (Consulta de Disponibilidad)
+
 ```SQL
 CREATE DATABASE habitaciones;
 USE habitaciones;
@@ -12,10 +15,11 @@ CREATE TABLE disponibilidad (
 );
 ```
 
-Datos iniciales para probar funcionamiento 
-```
+Datos iniciales para probar funcionamiento
+
+```SQL
 INSERT INTO disponibilidad (id_habitacion, tipo_habitacion, fecha_disponibilidad, status)
-VALUES 
+VALUES
     (1, 'Unica', '2024-12-20', 'disponible'),
     (2, 'Doble', '2024-12-20', 'disponible'),
     (3, 'Doble', '2024-12-21', 'disponible'),
@@ -24,6 +28,7 @@ VALUES
 ```
 
 ### API REST (Gestión de Reservas)
+
 ```SQL
 CREATE DATABASE reservaciones;
 USE reservaciones;
@@ -37,7 +42,8 @@ CREATE TABLE reservas (
 );
 ```
 
-### Microservicio (Gestión de Inventario) 
+### Microservicio (Gestión de Inventario)
+
 ```SQL
 CREATE DATABASE inventario;
 USE inventario;
@@ -48,6 +54,11 @@ CREATE TABLE habitaciones (
     status ENUM('disponible', 'ocupado', 'mantenimiento')
 );
 ```
+
 ---
+
 ## Pruebas Documentadas:
 
+### Servicio Web SOAP (Consulta de Disponibilidad)
+
+![Texto alternativo](./images/Screenshot_2.png)
