@@ -104,7 +104,28 @@ PATCH
 http://localhost:3005/rooms/4
 ![Texto alternativo](./images/Screenshot_7.png)
 
-Se verifica en la consulta de la tabla habitaciones de la BD inventarios que el estado cambió, evidenciando el correcto funcinoamiento del PATCH
+Se verifica en la consulta de la tabla habitaciones de la BD inventarios que el estado cambió, evidenciando el correcto funcinoamiento del PATCH.
+
 ![Texto alternativo](./images/Screenshot_8.png)
 
 **Link al video del funcionamiento:** https://udlaec-my.sharepoint.com/:f:/g/personal/alexander_quintana_udla_edu_ec/En3CH-1ZePVIhRLAIYIJ-LABm7paaKx1aJ-ItFbZpFiBig?e=Zog2pM
+
+## Instrucciones de Ejecución:
+
+- Antes que nada, se debe tener instalado node.js y MySQL
+- En primer lugar se debe crear cada base de datos con su respectiva tabla en MySQL, con los scripts SQL que se enceuntran en una de las secciones anterirores de el presente documento.
+- En cada archivo index.js que se encuentra en cada carpeta de los servicios SOAP, REST y Microservicios, se debe especificar correctamente los atributos para la conexión a la base de datos MySQL correspondiente a cada servicio:
+
+```SQL
+  host: "localhost",
+  user: "tu_usuario",
+  password: "tu_contraseña",
+  database: "nombre_de_la_BD",
+```
+
+- Se debe ejecutar en primer lugar el SOAP, cambiando de directorio a disponibilidad_SOAP para ejecutar el index.js
+- Se debe ejecutar después el API RESTful, cambiando de directorio a reservas_RSET para ejecutar el index.js
+- Se debe ejecutar por último el Microservicio, cambiando de directorio a inventario_Microsvc para ejecutar el index.js
+
+Para ejecutar cada archivo index.js se debe ejecutar el siguiente comando en la terminal: node index.js
+Hay que recorda que se debe ubicar correctamente en cada directorio antes de ejecutar cada servicio.
